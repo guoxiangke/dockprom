@@ -21,7 +21,7 @@ services:
       - '--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
     restart: unless-stopped
     ports:
-      - "9100:9100"
+      - "3389:9100"
     expose:
       - 9100
     networks:

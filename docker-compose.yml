@@ -11,6 +11,7 @@ volumes:
 services:
 
   prometheus:
+    restart: always
     image: prom/prometheus:v2.0.0
     container_name: prometheus
     volumes:
@@ -32,6 +33,7 @@ services:
       org.label-schema.group: "monitoring"
   
   alertmanager:
+    restart: always
     image: prom/alertmanager:v0.13.0
     container_name: alertmanager
     volumes: 
@@ -86,6 +88,7 @@ services:
   #     org.label-schema.group: "monitoring"
   
   grafana:
+    restart: always
     image: grafana/grafana:4.5.2
     container_name: grafana
     volumes:
@@ -107,6 +110,7 @@ services:
       org.label-schema.group: "monitoring"
 
   caddy:
+    restart: always
     image: stefanprodan/caddy
     container_name: caddy
     ports:
